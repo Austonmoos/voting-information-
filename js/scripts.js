@@ -10,17 +10,17 @@ window.onload = function() {
     // doing this clears results before displaying new ones, which
     // allows the user to submit the form again and again, and
     // see new results.
-    let drinkMenu = document.getElementById("drinks");
-    drinkMenu.setAttribute("class", "hidden");
-    let under21Message = document.getElementById("under-21");
-    under21Message.setAttribute("class", "hidden");
+    let registerLink = document.getElementById("can-vote");
+    registerLink.setAttribute("class", "hidden");
+    let under18Message = document.getElementById("under-18");
+    under18Message.setAttribute("class", "hidden");
 
     // we gather the age value
     const age = parseInt(document.querySelector("input#age").value);
 
     // we check if the age is greater than 21.
-    if (age >= 21) {
-      drinkMenu.removeAttribute("class");
+    if (age >= 18) {
+      registerLink.removeAttribute("class");
     } 
   };
 };

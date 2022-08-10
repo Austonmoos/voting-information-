@@ -3,39 +3,35 @@
 <head>
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <script src="js/scripts.js"></script>
-  <title>Drinks</title>
+  <title>Voting Information</title>
 </head>
 <body>
   <div>
     <form>
-      <label for="age">We need to verify that you are over 21 years of age before we can show you the drinks menu. What is your age?</label>
+      <label for="age">We need to verify that you are over 18 years of age before we can allow you to vote. What is your age?</label>
       <input id="age" type="number">
       <button type="submit">Submit!</button>
     </form>
 
-    <div id="drinks" class="hidden">
+    <div id="can-vote" class="hidden">
       <h1 id="birthday-wish"></h1>
-      <h1>Drink menu</h1>
+      <h1>Links to voting</h1>
 
-      <h2>Beer</h2>
+      <h2>Regester to vote here</h2>
       <ul>
-        <li>The King of Beer</li>
-        <li>The Queen of Beer</li>
-        <li>Real cold beer</li>
-      </ul>
-
-      <h2>Wine</h2>
-      <ul>
-        <li>Red wine</li>
-        <li>White wine</li>
-        <li>Blue wine</li>
+        <li><a href="https://www.usa.gov/register-to-vote">Register to Vote</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Election">Learn about elections</a></li>
       </ul>
     </div>
 
-    <div id="under-21" class="hidden">
-      <h1>Sorry, we can't serve you.</h1>
+    <div id="under-18" class="hidden">
+      <h1>Sorry, you are not able to vote.</h1>
 
-      <p>It's illegal in the US. Try Mexico or Europe.</p>
+        <p>You're not of age, try these links.
+          <ul>
+            <li><a href="https://www.ncsl.org/research/elections-and-campaigns/primaries-voting-age.aspx">learn about the voting process</a></li>
+          </ul>
+        </p>
     </div>
   </div>
 </body>
