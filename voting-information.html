@@ -1,38 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
-  <script src="js/scripts.js"></script>
-  <title>Voting Information</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/scripts.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Welcome to voting</title>
 </head>
 <body>
   <div>
     <form>
-      <label for="age">We need to verify that you are over 18 years of age before we can allow you to vote. What is your age?</label>
+      <label for ="age">We need to verify if you are over 16.</label> 
       <input id="age" type="number">
       <button type="submit">Submit!</button>
     </form>
-
-    <div id="can-vote" class="hidden">
-      <h1 id="birthday-wish"></h1>
-      <h1>Links to voting</h1>
-
-      <h2>Regester to vote here</h2>
-      <ul>
-        <li><a href="https://www.usa.gov/register-to-vote">Register to Vote</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Election">Learn about elections</a></li>
-      </ul>
-    </div>
-
-    <div id="under-18" class="hidden">
-      <h1>Sorry, you are not able to vote.</h1>
-
-        <p>You're not of age, try these links.
-          <ul>
-            <li><a href="https://www.ncsl.org/research/elections-and-campaigns/primaries-voting-age.aspx">learn about the voting process</a></li>
-          </ul>
-        </p>
-    </div>
+   </div>
+   <div id="under-16" class="hidden">
+    <h1>Sorry, you cannot vote as of yet.</h1>
+    <a href="https://sos.oregon.gov/voting/pages/registration.aspx?lang=en">Click on this link if your under 16 to learn more about the voting process.</a>
+   </div>
+   <div id="over-16" class="hidden">
+    <h1>You can vote!</h1>
+    <a href="https://secure.sos.state.or.us/orestar/vr/showVoterSearch.do?lang=eng&source=SOS">Click on this link if your 16 or older to vote!</a>
   </div>
 </body>
 </html>

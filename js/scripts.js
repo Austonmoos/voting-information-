@@ -1,26 +1,17 @@
 window.onload = function() {
-  // we get the form element
-  const form = document.querySelector("form");
-  // we create an event handler for the form's submission
-  form.onsubmit = function(event) {
+   let formVar = document.querySelector("form");
+   formVar.onsubmit = function(event) {
     event.preventDefault();
-
-    // we access two HTML elements, the drink menu and the message to underaged folks,
-    // and add the hidden class to those elements;
-    // doing this clears results before displaying new ones, which
-    // allows the user to submit the form again and again, and
-    // see new results.
-    let registerLink = document.getElementById("can-vote");
-    registerLink.setAttribute("class", "hidden");
-    let under18Message = document.getElementById("under-18");
-    under18Message.setAttribute("class", "hidden");
-
-    // we gather the age value
-    const age = parseInt(document.querySelector("input#age").value);
-
-    // we check if the age is greater than 21.
-    if (age >= 18) {
-      registerLink.removeAttribute("class");
-    } 
+    let under16 = document.getElementById("under-16");
+    under16.setAttribute("class","hidden");
+    let over16 = document.getElementById("over-16");
+    over16.setAttribute("class","hidden");
+    const age = parseInt(document.getElementById("age").value);
+    if (age >=16 ) {
+      over16.removeAttribute("class");
+    }
+    else if (age < 16 ) {
+      under16.removeAttribute("class");
+    }
   };
 };
